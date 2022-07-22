@@ -10,8 +10,8 @@ pipeline{
        steps{
           sshagent(['deploy']) {
             sh "chmod 777 /home/ec2-user/.jenkins -R"
-            sh "cp -rp /home/ec2-user/.jenkins/workspace/maven/target/*.jar  /home/sudo/output"
-            sh "scp -rp /home/sudo/output/*.jar sudo@35.173.126.85:/home/sudo"
+            sh "cp -rp /home/ec2-user/.jenkins/workspace/maven/target/*.jar  /home/best/output"
+            sh "scp -rp /home/best/output/*.jar best@35.173.126.85:/home/best"
           
         }
       }
